@@ -10,11 +10,11 @@
     <title>Gentellela Alela! | </title>
     
     <!-- Bootstrap -->
-    <link href="{{ asset("css/bootstrap.min.css") }}" rel="stylesheet">
+    <link href="{{ asset('vendors/bootstrap/dist/css/bootstrap.min.css') }}" rel="stylesheet">
     <!-- Font Awesome -->
-    <link href="{{ asset("css/font-awesome.min.css") }}" rel="stylesheet">
+    <link href="{{ asset('vendors/font-awesome/css/font-awesome.min.css') }}" rel="stylesheet">
     <!-- Custom Theme Style -->
-    <link href="{{ asset("css/gentelella.min.css") }}" rel="stylesheet">
+    <link href="{{ asset('css/custom.min.css') }}" rel="stylesheet">
 
 </head>
 
@@ -23,16 +23,16 @@
     <div class="login_wrapper">
         <div class="animate form login_form">
             <section class="login_content">
-				{!! BootForm::open(['url' => url('/login'), 'method' => 'post']) !!}
+				{!! Form::open(['url' => url('/login'), 'method' => 'post']) !!}
                     
 				<h1>Login Form</h1>
 			
-				{!! BootForm::email('email', 'Email', old('email'), ['placeholder' => 'Email', 'afterInput' => '<span>test</span>'] ) !!}
+				{!! Form::email('email', null, ['placeholder' => 'Email', 'afterInput' => '<span>test</span>'] ) !!}
 			
-				{!! BootForm::password('password', 'Password', ['placeholder' => 'Password']) !!}
+				{!! Form::password('password', ['placeholder' => 'Password']) !!}
 				
 				<div>
-					{!! BootForm::submit('Log in', ['class' => 'btn btn-default submit']) !!}
+					{!! Form::submit('Log in', ['class' => 'btn btn-default submit']) !!}
 					<a class="reset_pass" href="{{  url('/password/reset') }}">Lost your password ?</a>
 				</div>
                     
@@ -51,7 +51,7 @@
 						<p>©2016 All Rights Reserved. Gentelella Alela! is a Bootstrap 3 template. Privacy and Terms</p>
 					</div>
 				</div>
-				{!! BootForm::close() !!}
+				{!! Form::close() !!}
             </section>
         </div>
     </div>
