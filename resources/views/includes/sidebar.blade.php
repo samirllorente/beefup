@@ -1,7 +1,7 @@
 <div class="col-md-3 left_col">
   <div class="left_col scroll-view">
     <div class="navbar nav_title" style="border: 0;">
-      <a href="index.html" class="site_title"><i class="fa fa-paw"></i> <span>Gentelella Alela!</span></a>
+      <a href="index.html" class="site_title"><i class="fa fa-language"></i> <span>BEEF UP</span></a>
     </div>
 
     <div class="clearfix"></div>
@@ -9,11 +9,11 @@
     <!-- menu profile quick info -->
     <div class="profile clearfix">
       <div class="profile_pic">
-        <img src="{{ Gravatar::src('samir_llorente@outlook.com') }}" alt="..." class="img-circle profile_img">
+        <img src="{{ Gravatar::src(Auth::user()->email) }}" alt="..." class="img-circle profile_img">
       </div>
       <div class="profile_info">
-        <span>Welcome,</span>
-        <h2>John Doe</h2>
+        <span>Bienvenido,</span>
+        <h2>{{ Auth::user()->name }}</h2>
       </div>
     </div>
     <!-- /menu profile quick info -->
@@ -25,14 +25,14 @@
       <div class="menu_section">
         <h3>General</h3>
         <ul class="nav side-menu">
-          <li><a><i class="fa fa-home"></i> Home <span class="fa fa-chevron-down"></span></a>
+          <li><a><i class="fa fa-home"></i> Inicio <span class="fa fa-chevron-down"></span></a>
             <ul class="nav child_menu">
-              <li><a href="index.html">Dashboard</a></li>
-              <li><a href="index2.html">Dashboard2</a></li>
-              <li><a href="index3.html">Dashboard3</a></li>
+              <li><a href="#">Opción1</a></li>
+              <li><a href="#">Opción2</a></li>
+              <li><a href="#">Opción3</a></li>
             </ul>
           </li>
-          <li><a href="javascript:void(0)"><i class="fa fa-laptop"></i> Landing Page <span class="label label-success pull-right">Coming Soon</span></a></li>
+          <li><a href="javascript:void(0)"><i class="fa fa-laptop"></i> Alguna Opcion <span class="label label-success pull-right">Spam</span></a></li>
         </ul>
       </div>
     </div>
@@ -49,9 +49,14 @@
       <a data-toggle="tooltip" data-placement="top" title="Lock">
         <span class="glyphicon glyphicon-eye-close" aria-hidden="true"></span>
       </a>
-      <a data-toggle="tooltip" data-placement="top" title="Logout" href="{{ route('logout') }}">
+      <a data-toggle="tooltip" data-placement="top" title="Salir" href="#"
+        onclick="event.preventDefault(); 
+        document.getElementById('logout-form').submit();">
         <span class="glyphicon glyphicon-off" aria-hidden="true"></span>
       </a>
+      <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
+          @csrf
+      </form>
     </div>
     <!-- /menu footer buttons -->
   </div>
