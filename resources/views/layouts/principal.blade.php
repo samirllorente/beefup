@@ -15,6 +15,8 @@
     <link href="{{ asset('vendors/font-awesome/css/font-awesome.min.css') }}" rel="stylesheet">
     <!-- Custom Theme Style -->
     <link href="{{ asset('css/custom.min.css') }}" rel="stylesheet">
+    <!-- Beef Up-->
+    <link href="{{ asset('css/style.css') }}" rel="stylesheet">
   </head>
 
   <body class="nav-md">
