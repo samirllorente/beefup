@@ -15,8 +15,10 @@
     <link href="{{ asset('vendors/font-awesome/css/font-awesome.min.css') }}" rel="stylesheet">
     <!-- Custom Theme Style -->
     <link href="{{ asset('css/custom.min.css') }}" rel="stylesheet">
-    <!-- Beef Up-->
+    <!-- Beef Up -->
     <link href="{{ asset('css/style.css') }}" rel="stylesheet">
+    <!-- Others Styles -->
+    @yield('style')
   </head>
 
   <body class="nav-md">
@@ -44,6 +46,7 @@
     <script src="{{ asset('vendors/bootstrap/dist/js/bootstrap.min.js') }}"></script>
     <!-- Custom Theme Scripts -->
     <script src="{{ asset('js/custom.min.js') }}"></script>
-	
+    <!-- Others  Scripts -->
+	@yield('script')
   </body>
 </html>
