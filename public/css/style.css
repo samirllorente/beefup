@@ -1,0 +1,9 @@
+.site_title i{
+	border: none !important;
+}
+
+.img-circle.profile_img{
+	width: 75% !important;
+	border: none !important;
+    background: #24374a !important;
+}
