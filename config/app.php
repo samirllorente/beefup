@@ -151,6 +151,7 @@ return [
          * Package Service Providers...
          */
         Collective\Html\HtmlServiceProvider::class,
+        Laraveles\Spanish\SpanishServiceProvider::class,
         AdamWathan\BootForms\BootFormsServiceProvider::class,
         Thomaswelton\LaravelGravatar\LaravelGravatarServiceProvider::class,
 
