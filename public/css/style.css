@@ -1,3 +1,7 @@
+.t-0{
+	top: 0px
+}
+
 .site_title i{
 	border: none !important;
 }
@@ -6,4 +10,12 @@
 	width: 75% !important;
 	border: none !important;
     background: #24374a !important;
+}
+
+.right_col{
+	padding-top: 65px !important;
+}
+
+.alert{
+	margin-bottom: 10px;
 }
