@@ -25,14 +25,25 @@
       <div class="menu_section">
         <h3>General</h3>
         <ul class="nav side-menu">
-          <li><a><i class="fa fa-home"></i> Inicio <span class="fa fa-chevron-down"></span></a>
+          <li><a href="{{ url('/') }}"><i class="fa fa-home"></i> Inicio</a></li>
+          @if(Auth::user()->hasRole("teacher"))
+          <li><a><i class="fa fa-laptop"></i> Actividades <span class="fa fa-chevron-down"></span></a>
             <ul class="nav child_menu">
-              <li><a href="#">Opción1</a></li>
-              <li><a href="#">Opción2</a></li>
-              <li><a href="#">Opción3</a></li>
+              <li><a>Lectura<span class="fa fa-chevron-down"></span></a>
+                <ul class="nav child_menu">
+                  <li><a href="{{ route('reading.create') }}">Crear</a></li>
+                  <li><a href="{{ route('reading.index') }}">Ver todas</a></li>
+                </ul>
+              </li>
+              <li><a>Oraciones<span class="fa fa-chevron-down"></span></a>
+                <ul class="nav child_menu">
+                  <li><a href="#">Crear</a></li>
+                  <li><a href="#">Ver todas</a></li>
+                </ul>
+              </li>
             </ul>
           </li>
-          <li><a href="javascript:void(0)"><i class="fa fa-laptop"></i> Alguna Opcion <span class="label label-success pull-right">Spam</span></a></li>
+          @endif  
         </ul>
       </div>
     </div>

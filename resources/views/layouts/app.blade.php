@@ -23,7 +23,7 @@
 
   <body class="nav-md">
     <div class="container body">
-      <div class="main_container">
+      <div class="main_container"> <!--menu_fixed footer_fixed-->
         
         @include('includes.sidebar')
 
@@ -31,7 +31,8 @@
 
         <!-- page content -->
         <div class="right_col" role="main">
-          @yield('content')
+            @include('flash::message')
+            @yield('content')
         </div>
         <!-- /page content -->
 
