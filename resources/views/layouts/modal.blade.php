@@ -1,7 +1,7 @@
 <div id="modal-emergent" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
-	<form role='form'>
+	<form role='form' method="POST">
     	@csrf
-		@method('delete')
+		@method('DELETE')
 		<div class="modal-header">
 		    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
 		    <h5 id="myModalLabel">Eliminar materia</h5>
