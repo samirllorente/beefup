@@ -12,6 +12,7 @@
 				<tr>
 					<th scope="col">id</th>
 					<th scope="col">Titulo</th>
+					<th scope="col">Modificación</th>
 					<th scope="col"></th>
 				</tr>
 			</thead>
@@ -20,15 +21,18 @@
 				<tr>
 					<th scope="row">{{ $reading->id }}</th>
 					<td>{{ $reading->title }}</td>
+					<td>{{ $reading->updated_at }}</td>
 					<td>
-						<a style="margin-right: 1%" href="{{ route('reading.show', $reading->id)}}" class="btn btnd" title="Ver lectura"><i class="glyphicon glyphicon-eye-open"></i></a>
-						<a style="margin-right: 1%" href="{{ route('reading.edit', $reading->id)}}" class="btn btn-info" title="Editar lectura"><i class="glyphicon glyphicon-pencil"></i></a>
-		                <a data-toggle="modal" data-target="#modal-eliminar" codigoe="{{$reading->id}}" class="btn btn-danger tip-top" title="Eliminar lectura"><i class="glyphicon glyphicon-remove"></i></a>
+						<a style="margin-right: 1%" href="{{route('reading.show', $reading->id)}}" class="btn btn-default" title="Ver lectura"><i class="glyphicon glyphicon-eye-open"></i></a>
+						<a style="margin-right: 1%" href="{{route('reading.edit', $reading->id)}}" class="btn btn-info" title="Editar lectura"><i class="glyphicon glyphicon-pencil"></i></a>
+		                <a data-toggle="modal" data-target="#modal-emergent" data-url="{{route('reading.destroy', $reading->id)}}" class="btn btn-danger tip-top" title="Eliminar lectura"><i class="glyphicon glyphicon-remove"></i></a>
 					</td>
 				</tr>
 			@endforeach
 			</tbody>
 		</table>
+	@endcomponent
+	@component('layouts.modal')
 	@endcomponent
 @endsection
 
