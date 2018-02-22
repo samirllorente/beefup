@@ -19,3 +19,23 @@
 .alert{
 	margin-bottom: 10px;
 }
+
+
+div#modal-emergent{
+    margin: 0 auto;
+    padding: 0px !important;
+    top: 15%;
+    width: 95%;
+    max-width: 560px;
+    overflow-y: hidden;
+    background-color: #fff;
+    bottom: inherit;
+}
+
+div#modal-emergent .modal-header{
+    background-color: #efefef;
+}
+
+div#modal-emergent .modal-footer{
+    background-color: #f5f5f5;
+}
