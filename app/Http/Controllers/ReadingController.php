@@ -59,33 +59,33 @@ class ReadingController extends Controller
     /**
      * Display the specified resource.
      *
-     * @param  \App\Lectura  $lectura
+     * @param  \App\Reading  $reading
      * @return \Illuminate\Http\Response
      */
-    public function show(Lectura $lectura)
+    public function show(Reading $reading)
     {
-        //
+        return view('reading.show',compact('reading'));
     }
 
     /**
      * Show the form for editing the specified resource.
      *
-     * @param  \App\Lectura  $lectura
+     * @param  \App\Reading  $reading
      * @return \Illuminate\Http\Response
      */
-    public function edit(Lectura $lectura)
+    public function edit(Reading $reading)
     {
-        //
+        //return view('reading.edit',compact('reading'));
     }
 
     /**
      * Update the specified resource in storage.
      *
      * @param  \Illuminate\Http\Request  $request
-     * @param  \App\Lectura  $lectura
+     * @param  \App\Reading  $reading
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, Lectura $lectura)
+    public function update(Request $request, Reading $reading)
     {
         //
     }
@@ -93,10 +93,10 @@ class ReadingController extends Controller
     /**
      * Remove the specified resource from storage.
      *
-     * @param  \App\Lectura  $lectura
+     * @param  \App\Reading  $reading
      * @return \Illuminate\Http\Response
      */
-    public function destroy(Lectura $lectura)
+    public function destroy(Reading $reading)
     {
         //
     }
