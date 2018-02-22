@@ -98,6 +98,8 @@ class ReadingController extends Controller
      */
     public function destroy(Reading $reading)
     {
-        //
+        Reading::destroy($reading->id);
+        flash('Se elimino la lectura corretamente!')->success()->important();
+        return redirect()->back();
     }
 }
