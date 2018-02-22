@@ -7,7 +7,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <title>{{ config('app.name', 'BeefUp') }}</title>
+    <title>{{ config('app.name', 'Beef Up') }}</title>
 
     <!-- Bootstrap -->
     <link href="{{ asset('vendors/bootstrap/dist/css/bootstrap.min.css') }}" rel="stylesheet">
@@ -17,8 +17,12 @@
     <link href="{{ asset('css/custom.min.css') }}" rel="stylesheet">
     <!-- Beef Up -->
     <link href="{{ asset('css/style.css') }}" rel="stylesheet">
-    <!-- Others Styles -->
+    <!-- Others Styles
+     -->
     @yield('style')
+    <!-- jQuery -->
+    <script src="{{ asset('vendors/jquery/dist/jquery.min.js') }}"></script>
+    <!-- Bootstrap -->
   </head>
 
   <body class="nav-md">
@@ -40,10 +44,6 @@
 
       </div>
     </div>
-
-    <!-- jQuery -->
-    <script src="{{ asset('vendors/jquery/dist/jquery.min.js') }}"></script>
-    <!-- Bootstrap -->
     <script src="{{ asset('vendors/bootstrap/dist/js/bootstrap.min.js') }}"></script>
     <!-- Custom Theme Scripts -->
     <script src="{{ asset('js/custom.min.js') }}"></script>
