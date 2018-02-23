@@ -27,15 +27,18 @@
         <ul class="nav side-menu">
           <li><a href="{{ url('/') }}"><i class="fa fa-home"></i> Inicio</a></li>
           @if(Auth::user()->hasRole("teacher"))
-          <li><a><i class="fa fa-laptop"></i> Actividades <span class="fa fa-chevron-down"></span></a>
+          <li {!! classActivePath('reading*') !!}>
+            <a><i class="fa fa-laptop"></i> Actividades <span class="fa fa-chevron-down"></span></a>
             <ul class="nav child_menu">
-              <li><a >Lectura<span class="fa fa-chevron-down"></span></a>
+              <li {!! classActivePath('reading*') !!}>
+                <a>Lectura<span class="fa fa-chevron-down"></span></a>
                 <ul class="nav child_menu">
                   <li><a href="{{ route('reading.create') }}">Crear</a></li>
                   <li><a href="{{ route('reading.index') }}">Ver todas</a></li>
                 </ul>
               </li>
-              <li><a>Oraciones<span class="fa fa-chevron-down"></span></a>
+              <li>
+                <a>Oraciones<span class="fa fa-chevron-down"></span></a>
                 <ul class="nav child_menu">
                   <li><a href="#">Crear</a></li>
                   <li><a href="#">Ver todas</a></li>
