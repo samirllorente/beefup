@@ -29,7 +29,7 @@
           @if(Auth::user()->hasRole("teacher"))
           <li><a><i class="fa fa-laptop"></i> Actividades <span class="fa fa-chevron-down"></span></a>
             <ul class="nav child_menu">
-              <li><a>Lectura<span class="fa fa-chevron-down"></span></a>
+              <li><a >Lectura<span class="fa fa-chevron-down"></span></a>
                 <ul class="nav child_menu">
                   <li><a href="{{ route('reading.create') }}">Crear</a></li>
                   <li><a href="{{ route('reading.index') }}">Ver todas</a></li>
