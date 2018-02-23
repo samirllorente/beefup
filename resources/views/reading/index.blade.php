@@ -32,8 +32,7 @@
 			</tbody>
 		</table>
 	@endcomponent
-	@component('layouts.modal')
-	@endcomponent
+	@include('reading.modal_remove')
 @endsection
 
 @section('script')

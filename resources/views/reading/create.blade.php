@@ -7,15 +7,18 @@
 @section('content')
 	@parent
 	@component('layouts.panel',['title'=>'Crear nueva lectura'])
-		<form method="post" action="{{ route('reading.store') }}">
-			@csrf
+		@isset($reading)
+			{!! Form::model($reading,['route'=>['reading.update',$reading->id],'method'=>'put'],null) !!}
+		@else
+			{!! Form::open(['route'=>'reading.store','method'=>'post'],null) !!}
+		@endisset
 			<div class="input-group">
 				<span class="input-group-addon glyphicon glyphicon-pencil t-0" id="basic-addon1"></span>
-				<input type="text" name="title" class="form-control" placeholder="Titulo" aria-describedby="basic-addon1">
+				{!! Form::text('title',null,['class'=>'form-control', 'placeholder'=>'Titulo', 'aria-describedby'=>'basic-addon1']) !!}
 			</div>
-			<textarea id="summernote" name="reading"></textarea>
-			<input type="submit" class="btn btn-dark alignright" value="Guardar">
-		</form>
+			{!! Form::textarea('content',null,['id'=>'summernote']) !!}
+			{!! Form::submit('Guardar',['class'=>'btn btn-dark alignright']) !!}
+		{!! Form::close() !!}
 	@endcomponent
 
 @endsection
