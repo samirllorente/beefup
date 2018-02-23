@@ -50,9 +50,9 @@ class ReadingController extends Controller
         Reading::create([
             'user_id'=>Auth::user()->id,
             'title'=>$request->title,
-            'content'=>$request->reading,
+            'content'=>$request->content,
         ]);
-        flash('Se guardo la lectura corretamente!')->success()->important();
+        flash('Se guardo la lectura correctamente!')->success()->important();
         return redirect()->back();
     }
 
@@ -75,7 +75,7 @@ class ReadingController extends Controller
      */
     public function edit(Reading $reading)
     {
-        //return view('reading.edit',compact('reading'));
+        return view('reading.create',compact('reading'));
     }
 
     /**
@@ -87,7 +87,10 @@ class ReadingController extends Controller
      */
     public function update(Request $request, Reading $reading)
     {
-        //
+        $reading->fill($request->all());
+        $reading->save();
+        flash('Se guardo la lectura correctamente!')->success()->important();
+        return redirect()->route('reading.show',$reading->id);
     }
 
     /**
@@ -99,7 +102,7 @@ class ReadingController extends Controller
     public function destroy(Reading $reading)
     {
         Reading::destroy($reading->id);
-        flash('Se elimino la lectura corretamente!')->success()->important();
+        flash('Se elimino la lectura correctamente!')->success()->important();
         return redirect()->back();
     }
 }
