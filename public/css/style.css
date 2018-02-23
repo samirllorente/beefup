@@ -20,6 +20,14 @@
 	margin-bottom: 10px;
 }
 
+.panel_toolbox{
+	min-width: 0px;
+}
+
+.alignright{
+	margin-left: 5px;
+}
+
 
 div#modal-emergent{
     margin: 0 auto;
