@@ -16,7 +16,7 @@
 				<span class="input-group-addon glyphicon glyphicon-pencil t-0" id="basic-addon1"></span>
 				{!! Form::text('title',null,['class'=>'form-control', 'placeholder'=>'Titulo', 'aria-describedby'=>'basic-addon1']) !!}
 			</div>
-			{!! Form::textarea('content',null,['id'=>'summernote']) !!}
+			{!! Form::textarea('content',null,['id'=>'summernote','style'=>'width: 100%']) !!}
 			{!! Form::submit('Guardar',['class'=>'btn btn-dark alignright']) !!}
 		{!! Form::close() !!}
 	@endcomponent
