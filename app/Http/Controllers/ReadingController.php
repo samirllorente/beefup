@@ -103,6 +103,6 @@ class ReadingController extends Controller
     {
         Reading::destroy($reading->id);
         flash('Se elimino la lectura correctamente!')->success()->important();
-        return redirect()->back();
+        return redirect()->route('reading.index');
     }
 }
