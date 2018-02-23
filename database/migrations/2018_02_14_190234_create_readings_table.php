@@ -16,7 +16,7 @@ class CreateReadingsTable extends Migration
         Schema::create('readings', function (Blueprint $table) {
             $table->increments('id');
             $table->string('title',256);
-            $table->text('content');
+            $table->longText('content');
             $table->unsignedInteger('user_id');
             $table->foreign('user_id')->references('id')->on('users');
             $table->timestamps();
