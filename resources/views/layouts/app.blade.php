@@ -47,6 +47,8 @@
     <script src="{{ asset('vendors/bootstrap/dist/js/bootstrap.min.js') }}"></script>
     <!-- Custom Theme Scripts -->
     <script src="{{ asset('js/custom.min.js') }}"></script>
+    <!-- Beef Up -->
+    <script src="{{ asset('js/script.js') }}"></script>
     <!-- Others  Scripts -->
 	@yield('script')
   </body>
