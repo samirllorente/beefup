@@ -20,14 +20,17 @@
 	margin-bottom: 10px;
 }
 
+.alert.less_padding{
+   padding: 7px 25px 7px 10px
+}
+
 .panel_toolbox{
-	min-width: 0px;
+    min-width: 0px;
 }
 
 .alignright{
-	margin-left: 5px;
+    margin-left: 5px;
 }
-
 
 div#modal-emergent{
     margin: 0 auto;
