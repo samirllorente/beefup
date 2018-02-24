@@ -16,7 +16,7 @@ class ReadingController extends Controller
     public function __construct()
     {
         $this->middleware('auth');
-        $this->middleware('teacher');
+        $this->middleware('role:teacher');
     }
     /**
      * Display a listing of the resource.
