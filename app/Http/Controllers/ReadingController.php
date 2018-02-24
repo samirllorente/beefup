@@ -16,7 +16,7 @@ class ReadingController extends Controller
     public function __construct()
     {
         $this->middleware('auth');
-        $this->middleware('role:teacher');
+        $this->middleware('role:teacher',['except' => ['index', 'show']]);
     }
     /**
      * Display a listing of the resource.
@@ -25,7 +25,7 @@ class ReadingController extends Controller
      */
     public function index()
     {
-        $readings=Reading::all();
+        $readings=Reading::join('users','readings.user_id','=','users.id')->select('readings.*','users.name')->get();
         return view('reading.index',compact('readings'));
     }
 
