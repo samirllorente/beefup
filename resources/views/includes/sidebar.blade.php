@@ -26,24 +26,26 @@
         <h3>General</h3>
         <ul class="nav side-menu">
           <li><a href="{{ url('/') }}"><i class="fa fa-home"></i> Inicio</a></li>
-          @if(Auth::user()->hasRole("teacher"))
+          @if(Auth::user()->hasAnyRole(['teacher','student']))
           <li {!! classActivePath('reading*') !!}>
             <a><i class="fa fa-laptop"></i> Actividades <span class="fa fa-chevron-down"></span></a>
             <ul class="nav child_menu">
               <li {!! classActivePath('reading*') !!}>
                 <a>Lectura<span class="fa fa-chevron-down"></span></a>
                 <ul class="nav child_menu">
+                  @if(!Auth::user()->hasAnyRole('student'))
                   <li><a href="{{ route('reading.create') }}">Crear</a></li>
+                  @endif
                   <li><a href="{{ route('reading.index') }}">Ver todas</a></li>
                 </ul>
               </li>
-              <li>
+              <!--li>
                 <a>Oraciones<span class="fa fa-chevron-down"></span></a>
                 <ul class="nav child_menu">
                   <li><a href="#">Crear</a></li>
                   <li><a href="#">Ver todas</a></li>
                 </ul>
-              </li>
+              </li-->
             </ul>
           </li>
           @endif  
