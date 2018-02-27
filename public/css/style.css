@@ -32,6 +32,16 @@
     margin-left: 5px;
 }
 
+#TextHighlighter::-moz-selection{
+   background: #ffff7b;
+   /*color: #333;*/
+}
+
+#TextHighlighter *::selection {
+   background: #ffff7b;
+   /*color: #333;*/
+}
+
 div#modal-emergent{
     margin: 0 auto;
     padding: 0px !important;
