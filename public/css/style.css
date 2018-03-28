@@ -32,6 +32,10 @@
     margin-left: 5px;
 }
 
+.yellow{
+  color: #ffff00;
+}
+
 #TextHighlighter::-moz-selection{
    background: #ffff7b;
    /*color: #333;*/
