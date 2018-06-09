@@ -9,7 +9,7 @@
 @section('content')
 	@parent
 	<div class="row">
-		<div class="col-xs-12 {{ $isStudent?'col-sm-8':'' }}">
+		<div class="col-12 col-xs-12 {{ $isStudent?'col-sm-8':'' }}">
 			@component('layouts.panel',['title'=>$reading->title])
 				@if($isStudent)
 					@slot('options')
@@ -23,7 +23,7 @@
 			@endcomponent
 		</div>
 		@if($isStudent)
-		<div class="col-xs-12 col-sm-4" >
+		<div class="col-12 col-xs-12 col-sm-4" >
 			@component('layouts.panel')
 				@slot('title')
 			        Palabras desconocidas
