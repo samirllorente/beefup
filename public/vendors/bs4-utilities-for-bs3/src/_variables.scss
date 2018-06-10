@@ -1,0 +1,55 @@
+// Bootstrap 4 variable overrides
+
+$white:  #fff !default;
+
+$theme-colors: () !default;
+$theme-colors: map-merge((
+  primary: $brand-primary,
+  // secondary: $gray-600,
+  success: $brand-success,
+  info: $brand-info,
+  warning: $brand-warning,
+  danger: $brand-danger,
+  // light: $gray-100,
+  // dark: $gray-800
+), $theme-colors);
+
+$enable-gradients:          false !default;
+$enable-hover-media-query:  false !default;
+
+$spacer: $padding-base-horizontal !default;
+$spacers: () !default;
+$spacers: map-merge((
+  0: 0,
+  1: $padding-xs-horizontal,
+  2: $padding-small-horizontal,
+  3: $spacer,
+  4: $padding-large-horizontal
+), $spacers);
+
+$sizes: () !default;
+$sizes: map-merge((
+  25: 25%,
+  50: 50%,
+  75: 75%,
+  100: 100%
+), $sizes);
+
+$grid-breakpoints: (
+  xs: 0,
+  sm: 768px,
+  md: 992px,
+  lg: 1200px
+) !default;
+
+$border-width: 1px !default;
+$border-color: $gray-lighter !default;
+
+$border-radius: $border-radius-base !default;
+
+$font-weight-light: 300 !default;
+$font-weight-normal: normal !default;
+$font-weight-bold: bold !default;
+
+$zindex-fixed: 1030 !default;
+$zindex-sticky: 1030 !default;

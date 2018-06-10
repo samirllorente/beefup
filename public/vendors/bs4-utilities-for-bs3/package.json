@@ -1,0 +1,42 @@
+{
+  "name": "bs4-utilities-for-bs3",
+  "version": "4.0.1",
+  "description": "Backport of Boostrap 4's utility classes",
+  "homepage": "https://github.com/jbarreiros/bs4-utilities-for-bs3",
+  "bugs": {
+    "url": "https://github.com/jbarreiros/bs4-utilities-for-bs3/issues"
+  },
+  "license": "MIT",
+  "author": "The Bootstrap Authors (https://github.com/twbs/bootstrap/graphs/contributors)",
+  "contributors": [
+    "John Barreiros <johnbarreiros2@gmail.com>"
+  ],
+  "sass": "src/bs4-utilities-for-bs3.scss",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/jbarreiros/bs4-utilities-for-bs3"
+  },
+  "scripts": {
+    "start": "run-s build watch",
+    "prebuild": "rimraf dist/css/*",
+    "build": "run-s build:*",
+    "postbuild": "cleancss -o dist/css/bs4-utilities-for-bs3.min.css dist/css/bs4-utilities-for-bs3.css",
+    "build:sass": "node-sass --include-path node_modules src/bs4-utilities-for-bs3.scss dist/css/bs4-utilities-for-bs3.css",
+    "build:test": "node-sass --include-path node_modules --source-map-embed test/index.scss test/index.css",
+    "watch": "run-p watch:*",
+    "watch:sass": "npm run build:sass -- --watch",
+    "watch:test": "npm run build:test -- --watch",
+    "version": "npm run build && git add -A dist",
+    "postversion": "git push && git push --tags"
+  },
+  "dependencies": {
+    "bootstrap": "^4.0.0",
+    "bootstrap-sass": "3.3.7"
+  },
+  "devDependencies": {
+    "clean-css-cli": "^4.1.6",
+    "node-sass": "^4.5.3",
+    "npm-run-all": "^4.1.1",
+    "rimraf": "^2.6.0"
+  }
+}
