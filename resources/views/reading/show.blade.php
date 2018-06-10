@@ -33,6 +33,9 @@
 			    @endslot
 			    <div id="unknown_words"></div>
 			@endcomponent
+		    <form action="" method="POST">
+		    	<a href="" class="btn btn-dark">Crear oraciones</a>
+		    </form>
 		</div>
 		<div id="word_alert" class="alert alert-success alert-dismissible less_padding fade out" role="alert">
             <button type="button" class="close" data-dismiss="alert" aria-label="Close">

@@ -12,14 +12,14 @@
 
     <!-- Bootstrap -->
     <link href="{{ asset('vendors/bootstrap/dist/css/bootstrap.min.css') }}" rel="stylesheet">
+    <link href="{{ asset('vendors/bs4-utilities-for-bs3/dist/css/bs4-utilities-for-bs3.min.css') }}" rel="stylesheet">
     <!-- Font Awesome -->
     <link href="{{ asset('vendors/font-awesome/css/font-awesome.min.css') }}" rel="stylesheet">
     <!-- Custom Theme Style -->
     <link href="{{ asset('css/custom.min.css') }}" rel="stylesheet">
     <!-- Beef Up -->
     <link href="{{ asset('css/style.css') }}" rel="stylesheet">
-    <!-- Others Styles
-     -->
+    <!-- Others Styles -->
     @yield('style')
     <!-- jQuery -->
     <script src="{{ asset('vendors/jquery/dist/jquery.min.js') }}"></script>
